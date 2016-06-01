@@ -440,7 +440,7 @@ DialogInterface.OnDismissListener, PopupMenu.OnDismissListener{
             setActionBar();
             showActionBar(true);
         } else {
-            showActionBar(false);
+            //showActionBar(false);
         }
 
         if (representation.getFilterType() == FilterRepresentation.TYPE_WATERMARK_CATEGORY) {

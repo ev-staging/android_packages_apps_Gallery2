@@ -596,7 +596,6 @@ public class TimeLinePage extends ActivityState implements
             FilterUtils.setupMenuItems(actionBar, mMediaSetPath, true);
             //menu.findItem(R.id.action_group_by).setVisible(mShowClusterMenu);
             menu.findItem(R.id.action_camera).setVisible(GalleryUtils.isAnyCameraAvailable(mActivity));
-            menu.findItem(R.id.action_sync_picasa_albums).setVisible(true);
             menu.findItem(R.id.action_view_type).setVisible(false);
         }
 
@@ -703,12 +702,12 @@ public class TimeLinePage extends ActivityState implements
             case SelectionManager.ENTER_SELECTION_MODE: {
                 mActionModeHandler.startActionMode();
                 performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
-                ((GalleryActivity)mActivity).toggleNavDrawer(false);
+                ((GalleryActivity) mActivity).toggleNavBar(false);
                 break;
             }
             case SelectionManager.LEAVE_SELECTION_MODE: {
                 mActionModeHandler.finishActionMode();
-                ((GalleryActivity)mActivity).toggleNavDrawer(true);
+                ((GalleryActivity) mActivity).toggleNavBar(true);
                 mRootPane.invalidate();
                 break;
             }
