@@ -5,14 +5,12 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-design \
-    android-support-fragment \
-    android-support-core-ui \
-    android-support-compat \
-    android-support-transition \
-    android-support-v7-appcompat \
-    android-support-v7-recyclerview \
-    android-support-v13
+    $(ANDROID_SUPPORT_DESIGN_TARGETS) \
+    androidx.fragment_fragment \
+    androidx.heifwriter_heifwriter \
+    androidx.legacy_legacy-support-core-ui \
+    androidx.core_core \
+    androidx.legacy_legacy-support-v13
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     org.codeaurora.gallery.common \
